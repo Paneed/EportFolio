@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slider avec Flip Clock par slide</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./css/homeCSS.css" />
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+/>
+</head>
+
+<body>
+
+<div class="carousel">
+  <h1 id="slide-title" class="cpt"></h1>
+
+  <div class="slides">
+    <div class="slide active" data-date="2026-07-06T00:00:00" data-title="👸​ Anniv de Charene dans: "></div>
+    <div class="slide" data-date="2026-06-22T00:00:00" data-title="🤴​ Anniv de Eric dans: "></div>
+    <div class="slide" data-date="2024-06-07T18:30:00" data-title="👩🏻‍❤️‍👨🏻​ On est ensemble depuis: "></div>
+  </div>
+
+  <div class="controls">
+    <button id="prev">‹ Prev</button>
+    <span id="counter">1 / 3</span>
+    <button id="next">Next ›</button>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="logo">​💝​ Memory space ​💝​ </div>
+  <ul class="nav-links">
+    <li><a href="#gallery"> Galerie</a></li>
+    <li><a href="#gallery"> Vidéo</a></li>
+    <li><a href="#map"> Voyage</a></li>
+  </ul>
+</nav>
+
+<div class="gallery">
+<div id="gallery"></div>
+
+<form id="uploadForm">
+
+  <label for="fileUpload" class="custom-file-upload">Choisis une belle photo!</label>
+  <input type="file" id="fileUpload" name="media" accept="image/*,video/*" required />
+
+  <button type="submit">Valider ✔</button>
+  <div id="message"></div>
+</form>
+</div>
+
+<div class="map">
+<div id="map"></div>
+</div>
+<form id="spotForm" enctype="multipart/form-data">
+  <label>
+    Date :
+    <input type="date" name="date" required>
+  </label>
+
+  <label>
+    Note :
+    <input type="text" name="note">
+  </label>
+
+  <label for="photo" class="custom-file-upload">Choisis une belle photo!</label>
+  <input type="file" id="photo" name="photo" accept="image/*" required>
+
+  <input type="hidden" name="lat" required>
+  <input type="hidden" name="lng" required>
+
+  <button type="submit">Ajouter un spot</button>
+  <button type="button" id="clearSpotsBtn">Supprimer tous les spots</button>
+</form>
+
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<script src="./js/home.js"></script>
+
+</body>
+</html>
