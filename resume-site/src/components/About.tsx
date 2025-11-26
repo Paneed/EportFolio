@@ -20,7 +20,7 @@ J’aime concevoir et développer des logiciels ainsi que des pages web !
           <li>TypeScript / JavaScript</li>
           <li>Figma</li>
         </ul>
-<a href="/ShihongWangCV.pdf" download="MonCV.pdf">
+<a href="/ShihongWangCV.pdf" download="ShihongWangCV.pdf">
   <button>Télécharger mon CV</button>
 </a>
 
